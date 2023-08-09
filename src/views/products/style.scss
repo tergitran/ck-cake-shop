@@ -1,0 +1,28 @@
+.products-wrapper {
+  max-width: 1080px;
+  margin: auto;
+  &__title-main {
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 24px;
+    span {
+      margin: 0 8px;
+    }
+    b {
+      height: 2px;
+      width: 100%;
+      opacity: .1;
+      flex: 1;
+      background-color: currentColor;
+    }
+  }
+  .products-container {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-items: center;
+    gap: 16px;
+  }
+}
