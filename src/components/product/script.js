@@ -1,5 +1,5 @@
 export default {
-  name: "Home",
+  name: "Product",
   props: {
     product: {
       type: Object,
@@ -21,7 +21,15 @@ export default {
   data() {
     return {};
   },
-  computed: {},
+  computed: {
+    isIncart() {
+      return this.$store.getters.isIncart(this.product.id);
+    },
+  },
   created() {},
-  methods: {},
+  methods: {
+    addToCart() {
+      this.$store.dispatch("addProduct", this.product);
+    },
+  },
 };

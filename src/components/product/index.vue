@@ -15,10 +15,12 @@
       <span v-if="product.is_on_discount">{{ product.discounted_price }}$</span>
     </div>
     <span class="cart-container__action">
-      <button class="btn" v-if="true">
+      <button @click="addToCart" class="btn" v-if="!isIncart">
         <b-icon icon="cart-plus" style="width: 24px; height: 24px"></b-icon>
       </button>
-      <button class="btn" v-else>View cart</button>
+      <button class="btn" v-else>
+        <router-link to="/cart">View cart</router-link>
+      </button>
     </span>
   </div>
 </template>

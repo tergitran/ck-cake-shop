@@ -1,15 +1,14 @@
+import NavBar from "@/components/NavBar";
+
 export default {
-  name: 'PublicLayout',
+  name: "PublicLayout",
   components: {
+    NavBar
   },
   data() {
-    return {
-    };
+    return {};
   },
-  computed: {
-  },
-  created() {
-  },
-  methods: {
-  }
+  computed: {},
+  created() {},
+  methods: {},
 };

@@ -1,0 +1,29 @@
+.checkout-wrapper {
+  max-width: 700px;
+  margin: auto;
+  &__title-main {
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 24px;
+    span {
+      margin: 0 8px;
+    }
+    b {
+      height: 2px;
+      width: 100%;
+      opacity: 0.1;
+      flex: 1;
+      background-color: currentColor;
+    }
+  }
+  .product {
+    display: flex;
+    gap: 16px;
+  }
+  &__action {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
