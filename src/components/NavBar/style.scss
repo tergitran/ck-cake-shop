@@ -1,0 +1,19 @@
+.cart {
+  position: relative;
+  cursor: pointer;
+  &__counter {
+    position: absolute;
+    top: -2px;
+    right: -8px;
+    padding: 0 4px;
+    background-color: $color-yellow--origin;
+    font-size: medium;
+    border-radius: 99px;
+    line-height: 120%;
+  }
+}
+@media (min-width: 576px) {
+  .cart {
+    order: 1;
+  }
+}

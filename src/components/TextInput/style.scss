@@ -1,0 +1,10 @@
+.input-wrapper {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 32px;
+  input {
+    padding: 2px 8px;
+    border: none;
+    outline: none;
+  }
+}
