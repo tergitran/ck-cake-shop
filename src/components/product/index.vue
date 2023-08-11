@@ -1,5 +1,5 @@
 <template>
-  <div class="cart-container">
+  <div class="cart-container" v-b-modal="`modal-scrollable-${product.id}`">
     <div v-if="product.is_on_discount" class="ribbon-wrapper">
       <div class="ribbon">Sale</div>
     </div>
@@ -15,13 +15,61 @@
       <span v-if="product.is_on_discount">{{ product.discounted_price }}$</span>
     </div>
     <span class="cart-container__action">
-      <button @click="addToCart" class="btn" v-if="!isIncart">
+      <button @click.stop="addToCart" class="btn" v-if="!isIncart">
         <b-icon icon="cart-plus" style="width: 24px; height: 24px"></b-icon>
       </button>
       <button class="btn" v-else>
         <router-link to="/cart">View cart</router-link>
       </button>
     </span>
+    <b-modal
+      :id="`modal-scrollable-${product.id}`"
+      scrollable
+      centered
+      size="lg"
+      :title="product.name"
+    >
+      <div class="product-detail-wrapper">
+        <div class="left-content">
+          <img :src="product.image_url" alt="" />
+        </div>
+        <div class="right-content">
+          <div class="cart-container__description">
+            {{ product.description }}
+          </div>
+          <div class="cart-container__price">
+            <span :class="product.is_on_discount && 'discount'"
+              >{{ product.original_price }}$</span
+            >
+            <span v-if="product.is_on_discount"
+              >{{ product.discounted_price }}$</span
+            >
+          </div>
+          <div>{{ product.stock_count }} in stock</div>
+        </div>
+      </div>
+      <template #modal-footer>
+        <div class="footer__action">
+          <b-button
+            @click.stop="addToCart"
+            variant="outline-dark"
+            class="btn"
+            v-if="!isIncart"
+          >
+            <span class="mr-2">Add to cart</span
+            ><b-icon
+              icon="cart-plus"
+              style="width: 24px; height: 24px"
+            ></b-icon>
+          </b-button>
+          <button class="btn" v-else>
+            <router-link to="/cart">
+              <b-button class="btn">View Cart</b-button>
+            </router-link>
+          </button>
+        </div>
+      </template>
+    </b-modal>
   </div>
 </template>
 

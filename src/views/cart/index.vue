@@ -41,7 +41,9 @@
       </Table>
       <div class="cart-wrapper__action">
         <router-link to="/products">
-          <b-button class="btn mr-4">Continue Shopping</b-button>
+          <b-button variant="outline-secondary" class="btn mr-4"
+            >Continue Shopping</b-button
+          >
         </router-link>
         <router-link to="/checkout">
           <b-button class="btn text-uppercase mr-4">cart confirmation</b-button>
@@ -51,7 +53,9 @@
     <div v-else>
       Your cart is empty
       <router-link to="/products">
-        <b-button class="btn mr-4">Continue Shopping</b-button>
+        <b-button variant="outline-dark" class="btn mr-4"
+          >Continue Shopping</b-button
+        >
       </router-link>
     </div>
   </div>

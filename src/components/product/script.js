@@ -1,3 +1,6 @@
+import NumberInput from "@/components/NumberInput";
+import TextInput from "@/components/TextInput";
+
 export default {
   name: "Product",
   props: {
@@ -17,7 +20,10 @@ export default {
       },
     },
   },
-  components: {},
+  components: {
+    NumberInput,
+    TextInput,
+  },
   data() {
     return {};
   },
@@ -29,7 +35,6 @@ export default {
   created() {},
   methods: {
     addToCart() {
-      // const h = this.$createElement;
       const myContent = (
         <div class="d-flex flex-column gap-4">
           <div>
