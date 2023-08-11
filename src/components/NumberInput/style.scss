@@ -11,6 +11,15 @@
     text-align: center;
     border: none;
     outline: none;
+    &:invalid {
+      background-color: rgba(255, 0, 0, 0.5);
+      &::after {
+        content: "Tran dan";
+        width: 100px;
+        height: 100px;
+        display: block;
+      }
+    }
   }
 
   /* Chrome, Safari, Edge, Opera */

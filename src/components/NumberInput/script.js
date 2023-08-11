@@ -5,6 +5,14 @@ export default {
       type: Number,
       default: 1,
     },
+    min: {
+      type: Number,
+      default: 1,
+    },
+    max: {
+      type: Number,
+      default: 9999,
+    },
   },
   components: {},
   data() {
@@ -15,8 +23,20 @@ export default {
   mounted() {},
   methods: {
     onChange(value) {
+      if (value < this.min || value > this.max) {
+        return;
+      }
       this.$emit("input", value);
       this.$emit("onChange", value);
+    },
+    inputChange(event) {
+      if (event.target.value.length > 4) {
+        event.target.value = event.target.value.substr(0, 4);
+      }
+      const number = Number(event.target.value);
+      if (Number.isInteger(number)) {
+        this.onChange(Number(event.target.value));
+      }
     },
   },
 };

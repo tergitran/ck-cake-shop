@@ -3,8 +3,10 @@
     <button @click="onChange(value - 1)">-</button>
     <input
       type="number"
+      :min="min"
+      :max="max"
       :value="value"
-      @input="onChange(Number($event.target.value))"
+      @input="inputChange"
     />
     <button @click="onChange(value + 1)">+</button>
   </span>

@@ -1,5 +1,5 @@
 <template>
-  <span class="input-wrapper">
+  <span class="input-wrapper" :data-before-content="label">
     <input
       type="text"
       :value="value"

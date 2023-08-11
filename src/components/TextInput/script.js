@@ -18,7 +18,14 @@ export default {
   data() {
     return {};
   },
-  computed: {},
+  computed: {
+    label() {
+      const counter = this.maxlength - (this.value ? this.value.length : 0);
+      return this.maxlength === counter
+        ? `${counter} Characters`
+        : `${counter} Characters left`;
+    },
+  },
   created() {},
   mounted() {},
   methods: {

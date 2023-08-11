@@ -2,9 +2,16 @@
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.5);
   height: 32px;
+  position: relative;
   input {
     padding: 2px 8px;
     border: none;
     outline: none;
+  }
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    content: attr(data-before-content);
   }
 }
