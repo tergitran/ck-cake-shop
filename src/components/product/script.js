@@ -29,6 +29,27 @@ export default {
   created() {},
   methods: {
     addToCart() {
+      // const h = this.$createElement;
+      const myContent = (
+        <div class="d-flex flex-column gap-4">
+          <div>
+            <img
+              src={this.product.image_url}
+              style="width: 32px; margin-right: 8px;"
+            ></img>
+            {this.product.name}
+          </div>
+          <div>Has been added to cart</div>
+        </div>
+      );
+
+      this.$bvToast.toast([myContent], {
+        variant: "success",
+        toaster: "b-toaster-top-center",
+        autoHideDelay: 2000,
+        appendToast: false,
+        noCloseButton: true,
+      });
       this.$store.dispatch("addProduct", this.product);
     },
   },

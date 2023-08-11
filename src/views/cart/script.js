@@ -50,7 +50,21 @@ export default {
       this.$store.dispatch("updateProductByID", { id, items: { note } });
     },
     handleDeleteProduct(id) {
+      this.$bvToast.toast(`Removed from cart`, {
+        variant: "success",
+        toaster: "b-toaster-top-center",
+        autoHideDelay: 2000,
+        appendToast: false,
+        noCloseButton: true,
+      });
       this.$store.dispatch("removeProduct", id);
+    },
+    formatValue(val) {
+      let USDollar = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+      });
+      return USDollar.format(val);
     },
   },
 };
