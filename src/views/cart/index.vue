@@ -20,6 +20,7 @@
           <div>
             <NumberInput
               :value="item.quantity"
+              :max="item.stock_count"
               @onChange="(val) => handleChangeQuantity(item.id, val)"
             />
           </div>

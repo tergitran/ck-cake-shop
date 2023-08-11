@@ -30,8 +30,8 @@ export default {
       this.$emit("onChange", value);
     },
     inputChange(event) {
-      if (event.target.value.length > 4) {
-        event.target.value = event.target.value.substr(0, 4);
+      if (event.target.value > this.max || event.target.value < this.min) {
+        return;
       }
       const number = Number(event.target.value);
       if (Number.isInteger(number)) {
