@@ -1,0 +1,14 @@
+.table-container {
+  table {
+    th {
+      border-top: none;
+      border-bottom: none;
+    }
+    tbody {
+      tr td {
+        // display: flex;
+        // align-items: center;
+      }
+    }
+  }
+}

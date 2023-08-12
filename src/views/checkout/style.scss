@@ -1,6 +1,7 @@
 .checkout-wrapper {
   max-width: 700px;
   margin: auto;
+  padding: 0 16px 32px 16px;
   &__title-main {
     display: flex;
     align-items: center;
@@ -21,9 +22,35 @@
   .product {
     display: flex;
     gap: 16px;
+    & > div {
+      flex-direction: column;
+      justify-content: center;
+    }
+    .note-style {
+      font-style: italic;
+    }
   }
   &__action {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 576px) {
+  .checkout-wrapper {
+    &__action {
+      position: fixed;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      background-color: white;
+      padding: 16px 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      gap: 0;
+    }
   }
 }

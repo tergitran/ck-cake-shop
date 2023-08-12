@@ -2,9 +2,13 @@
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.5);
   height: 32px;
+  width: fit-content;
+  border-radius: 8px;
+  // overflow: hidden;
   position: relative;
   input {
     padding: 2px 8px;
+    border-radius: 8px;
     border: none;
     outline: none;
   }
@@ -13,5 +17,6 @@
     right: 0;
     top: 100%;
     content: attr(data-before-content);
+    font-size: 0.9rem;
   }
 }

@@ -3,6 +3,7 @@ export default {
   props: {
     fields: [],
     items: [],
+    theadClass: "",
   },
   components: {},
   data() {

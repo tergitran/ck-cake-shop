@@ -18,9 +18,9 @@
       <button @click.stop="addToCart" class="btn" v-if="!isIncart">
         <b-icon icon="cart-plus" style="width: 24px; height: 24px"></b-icon>
       </button>
-      <button class="btn" v-else>
-        <router-link to="/cart">View cart</router-link>
-      </button>
+      <router-link v-else to="/cart">
+        <button class="btn">View cart</button>
+      </router-link>
     </span>
     <b-modal
       :id="`modal-scrollable-${product.id}`"
@@ -45,14 +45,16 @@
               >{{ product.discounted_price }}$</span
             >
           </div>
-          <div>{{ product.stock_count }} in stock</div>
+          <div class="cart-container__stock">
+            {{ product.stock_count }} in stock
+          </div>
         </div>
       </div>
       <template #modal-footer>
         <div class="footer__action">
           <b-button
             @click.stop="addToCart"
-            variant="outline-dark"
+            variant=""
             class="btn"
             v-if="!isIncart"
           >
@@ -62,11 +64,9 @@
               style="width: 24px; height: 24px"
             ></b-icon>
           </b-button>
-          <button class="btn" v-else>
-            <router-link to="/cart">
-              <b-button class="btn">View Cart</b-button>
-            </router-link>
-          </button>
+          <router-link v-else to="/cart">
+            <b-button class="btn">View Cart</b-button>
+          </router-link>
         </div>
       </template>
     </b-modal>

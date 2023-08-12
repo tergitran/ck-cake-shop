@@ -1,6 +1,6 @@
 <template>
   <div class="table-container">
-    <b-table :items="items" :fields="fields">
+    <b-table :items="items" :fields="fields" :thead-class="theadClass">
       <!-- <template v-for="(_, slot) in $slots">
         <template :slot="slot">
           <slot :name="slot"></slot>
@@ -14,4 +14,4 @@
 </template>
 
 <script src="./script.js"></script>
-<style src="./style.scss" lang="scss" scoped></style>
+<style src="./style.scss" lang="scss"></style>

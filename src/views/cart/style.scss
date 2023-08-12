@@ -1,6 +1,7 @@
 .cart-wrapper {
   max-width: 900px;
   margin: auto;
+  padding: 0 16px 32px 16px;
   &__title-main {
     display: flex;
     align-items: center;
@@ -21,6 +22,19 @@
   .product {
     display: flex;
     gap: 16px;
+
+    &__detail {
+      &--name {
+        margin-bottom: 4px;
+      }
+      input {
+        border: solid 1px #ccc;
+        border-radius: 10px;
+      }
+      &--mobile {
+        display: none;
+      }
+    }
   }
 
   &__action {
@@ -28,5 +42,44 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+  }
+}
+
+// @include media-breakpoint-down(sm) {
+@media (max-width: 576px) {
+  .cart-wrapper {
+    padding: 0 8px 56px 8px;
+    .product {
+      gap: 8px;
+      align-items: center;
+      img {
+        width: 60px !important;
+        height: 60px !important;
+        max-width: 100px;
+      }
+      &__detail {
+        flex: 1;
+        &--mobile {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 16px;
+          align-items: center;
+        }
+      }
+    }
+    &__action {
+      position: fixed;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: white;
+      padding: 16px 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      gap: 0;
+    }
+  }
+  .table thead {
+    display: none;
   }
 }

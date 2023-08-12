@@ -2,6 +2,8 @@
   display: inline-flex;
   border: 1px solid rgba(0, 0, 0, 0.5);
   height: 32px;
+  border-radius: 12px;
+  overflow: hidden;
   button {
     padding: 0 8px;
     border: none;
@@ -32,5 +34,13 @@
   /* Firefox */
   input[type="number"] {
     -moz-appearance: textfield;
+  }
+}
+
+@media (max-width: 576px) {
+  .input-wrapper {
+    input {
+      width: 24px;
+    }
   }
 }
