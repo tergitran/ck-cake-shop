@@ -1,6 +1,7 @@
 import NumberInput from "@/components/NumberInput";
 import TextInput from "@/components/TextInput";
 import Table from "@/components/Table";
+import { formatCurrency } from "@/utils";
 
 export default {
   name: "Checkout",
@@ -34,6 +35,12 @@ export default {
   },
   created() {},
   methods: {
-    checkout() {},
+    checkout() {
+      //TODO: process checkout
+      this.$router.push("/gratitude");
+    },
+    formatValue(val) {
+      return formatCurrency(val);
+    },
   },
 };
