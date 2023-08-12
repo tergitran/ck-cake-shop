@@ -16,3 +16,13 @@ a.router-link-active {
 .b-toaster-leave-active {
   width: 100%;
 }
+
+.b-toast-success {
+  .toast {
+    background-color: rgba(
+      $color: $color-yellow--origin,
+      $alpha: 0.8
+    ) !important;
+    color: inherit;
+  }
+}

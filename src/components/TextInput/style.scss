@@ -20,3 +20,22 @@
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 576px) {
+  .input-wrapper {
+    margin-top: 8px;
+    height: 36px;
+    &::after {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -6px;
+      background: white;
+      width: max-content;
+      padding: 0 6px;
+      content: attr(data-before-content);
+      font-size: 12px;
+      line-height: 100%;
+    }
+  }
+}

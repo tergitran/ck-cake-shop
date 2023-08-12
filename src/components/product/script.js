@@ -44,7 +44,7 @@ export default {
             ></img>
             {this.product.name}
           </div>
-          <div>Has been added to cart</div>
+          <div style="margin-left: 40px">Has been added to cart</div>
         </div>
       );
 

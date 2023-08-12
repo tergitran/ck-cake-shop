@@ -25,7 +25,6 @@
               <div class="product__detail--mobile">
                 <div>{{ formatValue(item.price) }}</div>
                 <div>
-                  Qty:
                   <NumberInput
                     :value="item.quantity"
                     :max="item.stock_count"
@@ -64,11 +63,9 @@
       <div class="cart-wrapper__action">
         <router-link to="/products">
           <b-button variant="outline-secondary" class="btn"
-            >Continue Shopping<b-icon
-              icon="arrow-right"
-              style="margin-left: 8px"
-            ></b-icon
-          ></b-button>
+            ><b-icon icon="arrow-left" style="margin-right: 8px"></b-icon
+            >Continue Shopping</b-button
+          >
         </router-link>
         <router-link to="/checkout">
           <b-button class="btn text-uppercase">cart confirmation</b-button>
@@ -79,11 +76,9 @@
       Your cart is empty
       <router-link to="/products">
         <b-button variant="outline-dark" class="btn mr-4"
-          >Continue Shopping<b-icon
-            icon="arrow-right"
-            style="margin-left: 8px"
-          ></b-icon
-        ></b-button>
+          ><b-icon icon="arrow-left" style="margin-right: 8px"></b-icon>Continue
+          Shopping</b-button
+        >
       </router-link>
     </div>
   </div>
