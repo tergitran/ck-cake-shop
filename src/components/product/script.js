@@ -1,5 +1,6 @@
 import NumberInput from "@/components/NumberInput";
 import TextInput from "@/components/TextInput";
+import PATH from "@/router/paths";
 
 export default {
   name: "Product",
@@ -25,7 +26,9 @@ export default {
     TextInput,
   },
   data() {
-    return {};
+    return {
+      PATH,
+    };
   },
   computed: {
     isIncart() {
@@ -36,15 +39,17 @@ export default {
   methods: {
     addToCart() {
       const myContent = (
-        <div class="d-flex flex-column gap-4">
+        <div class="d-flex gap-4">
           <div>
             <img
+              style="max-width: 48px; margin-right: 8px"
               src={this.product.image_url}
-              style="width: 32px; margin-right: 8px;"
             ></img>
-            {this.product.name}
           </div>
-          <div style="margin-left: 40px">Has been added to cart</div>
+          <div>
+            <div>{this.product.name}</div>
+            <div style="">Has been added to cart</div>
+          </div>
         </div>
       );
 

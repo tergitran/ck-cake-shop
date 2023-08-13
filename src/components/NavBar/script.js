@@ -1,9 +1,13 @@
+import PATH from "@/router/paths";
+
 export default {
   name: "NavBar",
   props: {},
   components: {},
   data() {
-    return {};
+    return {
+      PATH,
+    };
   },
   computed: {
     counter() {

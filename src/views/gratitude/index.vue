@@ -24,7 +24,7 @@
         your experience remarkable.
       </p>
     </div>
-    <router-link to="/products">
+    <router-link :to="PATH.PRODUCTS">
       <b-button variant="outline-dark" class="btn m-auto"
         >Continue Shopping<b-icon
           icon="arrow-right"

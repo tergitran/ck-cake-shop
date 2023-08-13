@@ -37,7 +37,7 @@
     </template>
     <div v-else>
       Your cart is empty
-      <router-link to="/products">
+      <router-link :to="PATH.PRODUCTS">
         <b-button variant="outline-dark" class="btn mr-4"
           >Continue Shopping<b-icon
             icon="arrow-right"

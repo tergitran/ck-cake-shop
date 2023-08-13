@@ -19,10 +19,7 @@ a.router-link-active {
 
 .b-toast-success {
   .toast {
-    background-color: rgba(
-      $color: $color-yellow--origin,
-      $alpha: 0.8
-    ) !important;
-    color: inherit;
+    background-color: rgba($color: $color-yellow--origin, $alpha: 1) !important;
+    color: $color-black--two;
   }
 }

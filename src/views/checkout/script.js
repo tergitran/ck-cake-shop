@@ -1,6 +1,7 @@
 import NumberInput from "@/components/NumberInput";
 import TextInput from "@/components/TextInput";
 import Table from "@/components/Table";
+import PATH from "@/router/paths";
 import { formatCurrency } from "@/utils";
 
 export default {
@@ -12,6 +13,7 @@ export default {
   },
   data() {
     return {
+      PATH,
       fields: [
         {
           key: "item",
@@ -20,6 +22,7 @@ export default {
         {
           key: "subtotal",
           label: "Subtotal",
+          tdClass: "align-middle",
         },
       ],
       inputTest: 0,
@@ -37,7 +40,9 @@ export default {
   methods: {
     checkout() {
       //TODO: process checkout
-      this.$router.push("/gratitude");
+      this.$router.push(PATH.GRATITUDE);
+      // clear cart
+      this.$store.dispatch("updateCart", []);
     },
     formatValue(val) {
       return formatCurrency(val);

@@ -61,20 +61,20 @@
       </Table>
 
       <div class="cart-wrapper__action">
-        <router-link to="/products">
+        <router-link :to="PATH.PRODUCTS">
           <b-button variant="outline-secondary" class="btn"
             ><b-icon icon="arrow-left" style="margin-right: 8px"></b-icon
             >Continue Shopping</b-button
           >
         </router-link>
-        <router-link to="/checkout">
+        <router-link :to="PATH.CHECKOUT">
           <b-button class="btn text-uppercase">cart confirmation</b-button>
         </router-link>
       </div>
     </template>
     <div v-else>
       Your cart is empty
-      <router-link to="/products">
+      <router-link :to="PATH.PRODUCTS">
         <b-button variant="outline-dark" class="btn mr-4"
           ><b-icon icon="arrow-left" style="margin-right: 8px"></b-icon>Continue
           Shopping</b-button

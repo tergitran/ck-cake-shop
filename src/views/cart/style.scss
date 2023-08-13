@@ -28,7 +28,7 @@
         margin-bottom: 12px;
       }
       input {
-        border: solid 1px #ccc;
+        border: solid 1px $color-gray--one;
         border-radius: 10px;
       }
       &--mobile {
@@ -71,7 +71,7 @@
       position: fixed;
       flex-direction: row;
       justify-content: space-around;
-      background-color: white;
+      background-color: $color-white--one;
       box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
       padding: 16px 0;
       bottom: 0;
