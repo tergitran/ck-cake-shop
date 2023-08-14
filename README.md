@@ -1,6 +1,6 @@
 # CL Cake Shop
 
-You can view the demo app at [hear](https://dev--silly-granita-670854.netlify.app/)
+You can view the demo app at [hear](https://silly-granita-670854.netlify.app/)
 
 
 ## Description
