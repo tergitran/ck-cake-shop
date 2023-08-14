@@ -34,7 +34,7 @@ export default {
         },
         {
           key: "subtotal",
-          label: "Subtotal",
+          label: "Total Price",
           tdClass: "align-middle",
           class: "d-none d-sm-table-cell",
         },
