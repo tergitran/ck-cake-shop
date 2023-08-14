@@ -70,8 +70,11 @@
             </div>
             <div class="form">
               <b-form @submit.prevent="onSubmit" ref="form">
-                <div>
-                  Contact information
+                <b-form-group
+                  label="Contact information"
+                  label-class="font-weight-bold"
+                  label-size="lg"
+                >
                   <b-container class="p-0">
                     <b-row class="">
                       <b-col>
@@ -84,7 +87,7 @@
                         >
                           <b-form-input
                             id="input-1"
-                            v-model="name"
+                            v-model="billInfo.name"
                             :state="nameState"
                             trim
                           ></b-form-input>
@@ -99,7 +102,7 @@
                         >
                           <b-form-input
                             id="input-2"
-                            v-model="email"
+                            v-model="billInfo.email"
                             trim
                           ></b-form-input>
                         </b-form-group>
@@ -107,14 +110,14 @@
                       <!-- :state="emailState" -->
                       <b-col cols="12" md="5">
                         <b-form-group
-                          label="Enter your phone *"
+                          label="Your phone *"
                           label-for="input-3"
                           :invalid-feedback="'Invalid Phone'"
                           :state="phoneState"
                         >
                           <b-form-input
                             id="input-3"
-                            v-model="phone"
+                            v-model="billInfo.phone"
                             :state="phoneState"
                             trim
                           ></b-form-input>
@@ -123,31 +126,37 @@
                       <!-- :state="phoneState" -->
                     </b-row>
                   </b-container>
-                </div>
-                <div>
-                  <b-form-group label="Shipping methods">
-                    <b-form-radio
-                      v-model="shippingMethod"
-                      name="shipping-methods-radios"
-                      value="pickup"
-                      >Pickup at store</b-form-radio
-                    >
-                    <b-form-radio
-                      v-model="shippingMethod"
-                      name="shipping-methods-radios"
-                      value="delivery"
-                      >Delivery</b-form-radio
-                    >
-                  </b-form-group>
-                  <b-form-group label="Payment Method">
-                    <b-form-radio
-                      v-model="paymentMethod"
-                      name="pament-methods-radios"
-                      value="later"
-                      >Payment later</b-form-radio
-                    >
-                  </b-form-group>
-                </div>
+                </b-form-group>
+                <b-form-group
+                  label="Shipping methods"
+                  label-class="font-weight-bold"
+                  label-size="lg"
+                >
+                  <b-form-radio
+                    v-model="billInfo.shippingMethod"
+                    name="shipping-methods-radios"
+                    value="pickup"
+                    >Pickup at store</b-form-radio
+                  >
+                  <b-form-radio
+                    v-model="billInfo.shippingMethod"
+                    name="shipping-methods-radios"
+                    value="delivery"
+                    >Delivery</b-form-radio
+                  >
+                </b-form-group>
+                <b-form-group
+                  label="Payment Method"
+                  label-class="font-weight-bold"
+                  label-size="lg"
+                >
+                  <b-form-radio
+                    v-model="billInfo.paymentMethod"
+                    name="pament-methods-radios"
+                    value="later"
+                    >Payment later</b-form-radio
+                  >
+                </b-form-group>
                 <b-button
                   class="d-none d-md-inline"
                   type="submit"
