@@ -5,6 +5,10 @@ export default {
       type: String,
       default: "",
     },
+    showRemainCharacter: {
+      type: Boolean,
+      default: false,
+    },
     placeholder: {
       type: String,
       default: "Input your content",

@@ -1,5 +1,4 @@
 .checkout-wrapper {
-  max-width: 700px;
   margin: auto;
   padding: 0 16px 32px 16px;
   &__title-main {
@@ -36,9 +35,14 @@
     gap: 8px;
     align-items: flex-end;
   }
+
+  .bottom-area {
+    background: $color-white--one;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+  }
 }
 
-@media (max-width: 576px) {
+@include media-breakpoint-down(sm) {
   .checkout-wrapper {
     &__action {
       position: fixed;
@@ -51,6 +55,24 @@
       left: 0;
       right: 0;
       gap: 0;
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .checkout-wrapper {
+    .form {
+      margin-left: 60px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -30px;
+        width: 1px;
+        background-color: rgba(0, 0, 0, 0.1);
+        height: 80%;
+      }
     }
   }
 }

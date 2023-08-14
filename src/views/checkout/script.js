@@ -25,7 +25,14 @@ export default {
           tdClass: "align-middle",
         },
       ],
-      inputTest: 0,
+      shippingMethod: "pickup", // pickup || delivery
+      paymentMethod: "later",
+      name: "",
+      email: "",
+      phone: "",
+      isInBilling: false,
+      check: false,
+      isMobile: false,
     };
   },
   computed: {
@@ -35,17 +42,54 @@ export default {
     totalPrice() {
       return this.$store.getters.totalPrice;
     },
+    shippingFee() {
+      return this.shippingMethod === "pickup" ? 0 : 2;
+    },
+    nameState() {
+      if (!this.check) {
+        return null;
+      }
+      return this.name.length > 0 ? true : false;
+    },
+    phoneState() {
+      if (!this.check) {
+        return null;
+      }
+      return /^(03|05|07|08|09)[0-9]{8}$/.test(this.phone);
+    },
+    validForm() {
+      return this.email.length > 0 ? true : false;
+    },
   },
   created() {},
+  mounted() {
+    this.onResize();
+    window.addEventListener("resize", this.onResize, { passive: true });
+  },
   methods: {
     checkout() {
-      //TODO: process checkout
-      this.$router.push(PATH.GRATITUDE);
-      // clear cart
-      this.$store.dispatch("updateCart", []);
+      if (!this.isInBilling) {
+        this.isInBilling = true;
+      } else {
+        this.$refs.form.requestSubmit();
+      }
     },
     formatValue(val) {
       return formatCurrency(val);
     },
+    onSubmit() {
+      this.check = true;
+      if (this.nameState && this.phoneState) {
+        // clear cart
+        this.$store.dispatch("updateCart", []);
+        this.$router.push(PATH.GRATITUDE);
+      }
+    },
+    onResize() {
+      this.isMobile = window.innerWidth < 768;
+    },
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.onResize, { passive: true });
   },
 };

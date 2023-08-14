@@ -23,3 +23,23 @@ a.router-link-active {
     color: $color-black--two;
   }
 }
+
+.custom-control .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: $color-yellow--origin;
+  border: $color-yellow--origin;
+}
+.custom-control
+  .custom-control-input:not(:disabled):active
+  ~ .custom-control-label::before {
+  background-color: rgba($color: $color-yellow--origin, $alpha: 0.8);
+  border: rgba($color: $color-yellow--origin, $alpha: 0.8);
+}
+
+.custom-control .custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 0.2rem rgba($color: $color-yellow--origin, $alpha: 0.25);
+}
+
+.form-group input.form-control:focus {
+  border-color: $color-yellow--origin;
+  box-shadow: 0 0 0 0.2rem rgba($color: $color-yellow--origin, $alpha: 0.25);
+}

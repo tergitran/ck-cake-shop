@@ -12,6 +12,7 @@
                   <div class="product__detail--name">{{ item.name }}</div>
                   <TextInput
                     :value="item.note"
+                    showRemainCharacter
                     placeholder="Enter message on cake"
                     @onChange="(val) => handleChangeNote(item.id, val)"
                   />
@@ -39,6 +40,7 @@
           <div>
             <NumberInput
               :value="item.quantity"
+              showRemainCharacter
               :max="item.stock_count"
               @onChange="(val) => handleChangeQuantity(item.id, val)"
             />
@@ -62,13 +64,17 @@
 
       <div class="cart-wrapper__action">
         <router-link :to="PATH.PRODUCTS">
-          <b-button variant="outline-secondary" class="btn"
+          <b-button
+            variant="outline-secondary"
+            class="btn btn-lg btn-md-md w-100"
             ><b-icon icon="arrow-left" style="margin-right: 8px"></b-icon
-            >Continue Shopping</b-button
+            >Shopping</b-button
           >
         </router-link>
         <router-link :to="PATH.CHECKOUT">
-          <b-button class="btn text-uppercase">cart confirmation</b-button>
+          <b-button class="btn text-capitalize btn btn-lg btn-md-md w-100"
+            >Confirmation</b-button
+          >
         </router-link>
       </div>
     </template>

@@ -6,3 +6,13 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .table-container {
+    table {
+      td {
+        padding: 0.5rem;
+      }
+    }
+  }
+}
