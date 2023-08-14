@@ -14,7 +14,7 @@
               <template #cell(item)="{ item }">
                 <div class="product">
                   <img
-                    style="width: 48px; width: 48px"
+                    style="width: 48px; height: 48px"
                     :src="item.image_url"
                     alt=""
                   />
