@@ -16,7 +16,7 @@
     z-index: 1;
     .ribbon {
       font: bold 15px sans-serif;
-      color: #333;
+      color: $color-brown--one;
       text-align: center;
       transform: rotate(-45deg);
       position: relative;
@@ -72,7 +72,7 @@
 
   &__stock {
     margin-top: 16px;
-    color: green;
+    color: $color-green--one;
   }
 
   &__action {
@@ -103,5 +103,13 @@
 
   .right-content {
     width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .cart-container {
+    &__action {
+      display: none;
+    }
   }
 }

@@ -18,10 +18,6 @@
 .navbar {
   opacity: 0.95;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
-  &-brand {
-    &:hover {
-    }
-  }
 }
 #nav-text-collapse {
   .nav-item .router-link-exact-active {
@@ -44,11 +40,26 @@
     margin-top: 16px;
     .navbar-nav {
       gap: 4px;
+      text-align: center;
     }
   }
 }
+
 @media (min-width: 576px) {
   .cart {
     order: 1;
+  }
+}
+@media (max-width: 576px) {
+  #nav-text-collapse {
+    font-size: larger;
+    .nav-item {
+      visibility: hidden;
+    }
+    &.show {
+      .nav-item {
+        visibility: visible;
+      }
+    }
   }
 }

@@ -2,6 +2,7 @@ import NumberInput from "@/components/NumberInput";
 import TextInput from "@/components/TextInput";
 import Table from "@/components/Table";
 import { formatCurrency } from "@/utils";
+import PATH from "@/router/paths";
 
 export default {
   name: "Cart",
@@ -12,6 +13,7 @@ export default {
   },
   data() {
     return {
+      PATH,
       fields: [
         {
           key: "item",
@@ -32,7 +34,7 @@ export default {
         },
         {
           key: "subtotal",
-          label: "Subtotal",
+          label: "Total Price",
           tdClass: "align-middle",
           class: "d-none d-sm-table-cell",
         },

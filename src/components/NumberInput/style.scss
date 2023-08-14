@@ -14,9 +14,9 @@
     border: none;
     outline: none;
     &:invalid {
-      background-color: rgba(255, 0, 0, 0.5);
+      background-color: rgba($color-black--one, 0.5);
       &::after {
-        content: "Tran dan";
+        content: "";
         width: 100px;
         height: 100px;
         display: block;

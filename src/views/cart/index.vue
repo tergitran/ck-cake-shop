@@ -12,6 +12,7 @@
                   <div class="product__detail--name">{{ item.name }}</div>
                   <TextInput
                     :value="item.note"
+                    showRemainCharacter
                     placeholder="Enter message on cake"
                     @onChange="(val) => handleChangeNote(item.id, val)"
                   />
@@ -25,7 +26,6 @@
               <div class="product__detail--mobile">
                 <div>{{ formatValue(item.price) }}</div>
                 <div>
-                  Qty:
                   <NumberInput
                     :value="item.quantity"
                     :max="item.stock_count"
@@ -40,6 +40,7 @@
           <div>
             <NumberInput
               :value="item.quantity"
+              showRemainCharacter
               :max="item.stock_count"
               @onChange="(val) => handleChangeQuantity(item.id, val)"
             />
@@ -62,28 +63,26 @@
       </Table>
 
       <div class="cart-wrapper__action">
-        <router-link to="/products">
-          <b-button variant="outline-secondary" class="btn"
-            >Continue Shopping<b-icon
-              icon="arrow-right"
-              style="margin-left: 8px"
-            ></b-icon
-          ></b-button>
+        <router-link :to="PATH.PRODUCTS">
+          <b-button variant="outline-secondary" class="btn btn-lg w-100"
+            ><b-icon icon="arrow-left" style="margin-right: 8px"></b-icon
+            >Shopping</b-button
+          >
         </router-link>
-        <router-link to="/checkout">
-          <b-button class="btn text-uppercase">cart confirmation</b-button>
+        <router-link :to="PATH.CHECKOUT">
+          <b-button class="btn text-capitalize btn btn-lg w-100"
+            >Confirmation</b-button
+          >
         </router-link>
       </div>
     </template>
     <div v-else>
       Your cart is empty
-      <router-link to="/products">
+      <router-link :to="PATH.PRODUCTS">
         <b-button variant="outline-dark" class="btn mr-4"
-          >Continue Shopping<b-icon
-            icon="arrow-right"
-            style="margin-left: 8px"
-          ></b-icon
-        ></b-button>
+          ><b-icon icon="arrow-left" style="margin-right: 8px"></b-icon>Continue
+          Shopping</b-button
+        >
       </router-link>
     </div>
   </div>

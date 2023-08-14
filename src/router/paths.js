@@ -1,7 +1,8 @@
 export default {
-  ROOT: '/',
-  PAGE_NOT_FOUND: '/404',
-  PRODUCTS: '/products',
-  cart: '/cart',
-  ID: '/:id',
-}
+  ROOT: "/",
+  PRODUCTS: "/products",
+  CART: "/cart",
+  CHECKOUT: "/checkout",
+  GRATITUDE: "/gratitude",
+  ID: "/:id",
+};

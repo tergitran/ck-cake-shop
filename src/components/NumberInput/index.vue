@@ -1,6 +1,6 @@
 <template>
   <span class="input-wrapper">
-    <button @click="onChange(value - 1)">-</button>
+    <button @click="onChange(value - 1)"><b-icon icon="dash"></b-icon></button>
     <input
       type="number"
       :min="min"
@@ -8,7 +8,7 @@
       :value="value"
       @input="inputChange"
     />
-    <button @click="onChange(value + 1)">+</button>
+    <button @click="onChange(value + 1)"><b-icon icon="plus"></b-icon></button>
   </span>
 </template>
 

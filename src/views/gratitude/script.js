@@ -1,8 +1,12 @@
+import PATH from "@/router/paths";
+
 export default {
   name: "Gratitude",
   components: {},
   data() {
-    return {};
+    return {
+      PATH,
+    };
   },
   computed: {},
   created() {},

@@ -1,5 +1,8 @@
 <template>
-  <span class="input-wrapper" :data-before-content="label">
+  <span
+    class="input-wrapper"
+    :data-before-content="showRemainCharacter && label"
+  >
     <input
       type="text"
       :value="value"

@@ -1,15 +1,15 @@
+import PATH from "@/router/paths";
+
 export default {
-  name: 'Home',
-  components: {
-  },
+  PATH,
+  name: "Home",
+  components: {},
   data() {
     return {
+      PATH,
     };
   },
-  computed: {
-  },
-  created() {
-  },
-  methods: {
-  }
+  computed: {},
+  created() {},
+  methods: {},
 };

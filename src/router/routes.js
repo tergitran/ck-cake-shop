@@ -1,7 +1,8 @@
+import PATH from "./paths";
 export default [
-  { path: "/", component: () => import("@/views/home") },
-  { path: "/products", component: () => import("@/views/products") },
-  { path: "/cart", component: () => import("@/views/cart") },
-  { path: "/checkout", component: () => import("@/views/checkout") },
-  { path: "/gratitude", component: () => import("@/views/gratitude") },
+  { path: PATH.ROOT, component: () => import("@/views/home") },
+  { path: PATH.PRODUCTS, component: () => import("@/views/products") },
+  { path: PATH.CART, component: () => import("@/views/cart") },
+  { path: PATH.CHECKOUT, component: () => import("@/views/checkout") },
+  { path: PATH.GRATITUDE, component: () => import("@/views/gratitude") },
 ];

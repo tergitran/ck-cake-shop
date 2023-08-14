@@ -18,7 +18,7 @@
       <button @click.stop="addToCart" class="btn" v-if="!isIncart">
         <b-icon icon="cart-plus" style="width: 24px; height: 24px"></b-icon>
       </button>
-      <router-link v-else to="/cart">
+      <router-link v-else :to="PATH.CART">
         <button class="btn">View cart</button>
       </router-link>
     </span>
@@ -64,7 +64,7 @@
               style="width: 24px; height: 24px"
             ></b-icon>
           </b-button>
-          <router-link v-else to="/cart">
+          <router-link v-else :to="PATH.CART">
             <b-button class="btn">View Cart</b-button>
           </router-link>
         </div>
