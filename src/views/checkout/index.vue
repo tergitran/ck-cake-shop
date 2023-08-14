@@ -19,9 +19,11 @@
                     alt=""
                   />
                   <div class="d-flex">
-                    <div>
-                      {{ item.name
-                      }}<span class="ml-4 font-weight-bold"
+                    <div class="d-flex align-items-center">
+                      <span>{{ item.name }}</span>
+                      <span
+                        class="font-weight-bold col flex-nowrap"
+                        style="min-width: max-content"
                         >x {{ item.quantity }}</span
                       >
                     </div>

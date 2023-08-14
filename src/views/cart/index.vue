@@ -64,15 +64,13 @@
 
       <div class="cart-wrapper__action">
         <router-link :to="PATH.PRODUCTS">
-          <b-button
-            variant="outline-secondary"
-            class="btn btn-lg btn-md-md w-100"
+          <b-button variant="outline-secondary" class="btn btn-lg w-100"
             ><b-icon icon="arrow-left" style="margin-right: 8px"></b-icon
             >Shopping</b-button
           >
         </router-link>
         <router-link :to="PATH.CHECKOUT">
-          <b-button class="btn text-capitalize btn btn-lg btn-md-md w-100"
+          <b-button class="btn text-capitalize btn btn-lg w-100"
             >Confirmation</b-button
           >
         </router-link>

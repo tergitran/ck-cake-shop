@@ -22,6 +22,7 @@ export default {
         {
           key: "subtotal",
           label: "Total Price",
+          thClass: "max-content",
           tdClass: "align-middle",
         },
       ],
@@ -80,8 +81,9 @@ export default {
       this.check = true;
       if (this.nameState && this.phoneState) {
         // clear cart
-        this.$router.push(PATH.GRATITUDE);
-        this.$store.dispatch("updateCart", []);
+        this.$router.push(PATH.GRATITUDE).then(() => {
+          this.$store.dispatch("updateCart", []);
+        });
       }
     },
     onResize() {

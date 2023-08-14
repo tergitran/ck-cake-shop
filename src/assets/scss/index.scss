@@ -17,6 +17,10 @@ a.router-link-active {
   width: 100%;
 }
 
+.max-content div {
+  width: max-content;
+}
+
 .b-toast-success {
   .toast {
     background-color: rgba($color: $color-yellow--origin, $alpha: 1) !important;
@@ -42,4 +46,10 @@ a.router-link-active {
 .form-group input.form-control:focus {
   border-color: $color-yellow--origin;
   box-shadow: 0 0 0 0.2rem rgba($color: $color-yellow--origin, $alpha: 0.25);
+}
+
+.btn-outline-secondary {
+  &:hover {
+    opacity: 0.5;
+  }
 }
